@@ -33,11 +33,11 @@ const LineChart = () => {
                             label: 'My First Dataset',
                             data: [34, 64, 23, 45, 67, 24, 64],
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)'
+                                'red'
                               
                             ],
                             borderColor: [
-                                'rgb(255, 99, 132)'
+                                'red'
                              
                             ],
                             borderWidth: 1
@@ -54,12 +54,41 @@ const LineChart = () => {
 
                         scales: {
                             x: {
-                                type: "linear"
+                                type: "linear",
+                                ticks: {
+                                    color: 'white', // Set x-axis labels to white
+                                    font: {
+                                        weight: 'bold', // Make x-axis labels bold
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.3)' 
+                                }
                             },
                             y: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                ticks: {
+                                    color: 'white', // Set y-axis labels to white
+                                    font: {
+                                        weight: 'bold', // Make y-axis labels bold
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.3)' 
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: 'white', // Change legend labels to white
+                                    font: {
+                                        weight: 'bold', // Make legend labels bold
+                                    }
+                                }
                             }
                         }
+    
                     },
                 });
 

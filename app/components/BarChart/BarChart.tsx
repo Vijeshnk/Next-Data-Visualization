@@ -66,6 +66,9 @@ const BarChart = () => {
                                     font: {
                                         weight: 'bold' // Make x-axis labels bold
                                     }
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.3)' 
                                 }
                             },
                             y: {
@@ -75,7 +78,11 @@ const BarChart = () => {
                                     font: {
                                         weight: 'bold' // Make y-axis labels bold
                                     }
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.3)' 
                                 }
+    
                             }
                         },
                         plugins: {

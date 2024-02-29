@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 import { Chart } from 'chart.js/auto';
 
 type ChartElement = HTMLCanvasElement & {
-    chart?: Chart; // Make sure to import Chart from 'chart.js'.
+    chart?: Chart; 
 };
 
 
@@ -42,13 +42,13 @@ const DoughnutChart = () => {
                             'darkorange'
                         ],
                         borderColor: [
-                            'red',
-                            'teal',
-                            'aqua',
-                            'yellow',
-                            'green',
-                            'blueviolet',
-                            'darkorange'
+                            'gray',
+                            'gray',
+                            'gray',
+                            'gray',
+                            'gray',
+                            'gray',
+                            'gray'
                         ],
                         borderWidth: 1
                     }]
@@ -57,12 +57,32 @@ const DoughnutChart = () => {
                     responsive: true,
                     maintainAspectRatio: false,
                     animation: {
-                        animateScale: true, // Animate the scale of the pie/doughnut chart from the center.
-                        animateRotate: true, // Animate the rotation of the pie/doughnut chart.
-                        duration: 2000, // Duration in milliseconds
+                        animateScale: true, 
+                        animateRotate: true, 
+                        duration: 2000, 
                     },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white', // Set legend labels to white
+                                font: {
+                                    size: 14, // Increase label text size
+                                    weight: 'bold', // Make label text bold
+                                }
+                            }
+                        },
+                        tooltip: {
+                            titleFont: {
+                                size: 14, // Increase tooltip title size
+                                weight: 'bold',
+                            },
+                            bodyFont: {
+                                size: 12, // Increase tooltip body size
+                                weight: 'bold',
+                            }
+                        }
+                    }
 
-                
                 },
             });
         

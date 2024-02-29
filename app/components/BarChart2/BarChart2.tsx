@@ -30,23 +30,23 @@ const BarChart2 = () => {
 
                     labels: ["John", "Jan", "Doe", "April", "May", ],
                     datasets: [{
-                        label: 'My First Dataset',
-                        data: [65, 59, 80, 81, 56],
+                        label: 'My First ',
+                        data: [45, 59, 40, 21, 66],
                         backgroundColor: [
-                            'red',
-                            'blue',
-                            'yellow',
-                            'violet',
-                            'green',
+                            '#9eee02',
+                            '#ffff00',
+                            '#ffbb34',
+                            '#fe0100',
+                            '#cd0074',
                            
                           
                         ],
                         borderColor: [
-                            'red',
-                            'blue',
-                            'yellow',
-                            'violet',
-                            'green',
+                            'gray',
+                            'gray',
+                            'gray',
+                            'gray',
+                            'gray',
                            
                            
                         ],
@@ -62,12 +62,42 @@ const BarChart2 = () => {
                     },
                     scales: {
                         x: {
-                            type: "category"
+                            type: "category",
+                            ticks: {
+                                color: 'white', // Change x-axis labels to white
+                                font: {
+                                    weight: 'bold', // Make x-axis labels bold
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.3)'
+                            }
                         },
                         y: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            ticks: {
+                                color: 'white', // Change y-axis labels to white
+                                font: {
+                                    weight: 'bold', // Make y-axis labels bold
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.3)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white', // Change legend labels to white
+                                font: {
+                                    weight: 'bold', // Make legend labels bold
+                                }
+                            }
                         }
                     }
+
+
                 },
             });
         
