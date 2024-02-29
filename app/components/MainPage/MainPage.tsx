@@ -11,6 +11,7 @@ import TitleBar from '../TitleBar/TitleBar'
 import StateCount from '../StatCount/StateCount'
 import LineInteractionGraph from '../LineInteractionGraph/LineInteractionGraph'
 import BarChart2 from '../BarChart2/BarChart2'
+import StateCountApi from '../StatCountApi/StatCountApi'
 
 
 const MainPage = () => {
@@ -33,7 +34,7 @@ const MainPage = () => {
     <StateCount title={'Revenue'} targetCount={4000}/>
     </div>
     <div className={styles.stats4}>
-    <StateCount title={'Orders'} targetCount={2000}/>
+   < StateCountApi title={'Orders'}/>
     </div>
     <div className={styles.chart1}><div className={styles.ImageContainer}>  <BarChart/></div></div>
     <div className={styles.chart2}><div className={styles.ImageContainer}><PieChart/></div></div>

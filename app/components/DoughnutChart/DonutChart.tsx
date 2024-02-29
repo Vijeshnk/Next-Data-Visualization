@@ -38,7 +38,7 @@ const DoughnutChart = () => {
                             'aqua',
                             'yellow',
                             'green',
-                            'blueviolet',
+                            'pink',
                             'darkorange'
                         ],
                         borderColor: [
