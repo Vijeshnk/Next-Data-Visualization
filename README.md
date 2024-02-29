@@ -30,5 +30,8 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-![Uploading screencapture-localhost-3000-2024-02-29-21_22_58.png…]()
+
+![screencapture-localhost-3000-2024-02-29-21_22_58](https://github.com/Vijeshnk/Next-Data-Visualization/assets/48064217/97961b4c-3858-410c-b9c8-b675420d8b6b)
+
+Live: https://next-data-visualization.vercel.app/
 
