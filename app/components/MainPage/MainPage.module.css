@@ -1,0 +1,101 @@
+
+.gridContainer {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "title title title title filter dropdown"
+        "stats1 stats2 stats3 stats4 chart1 chart1"
+        "chart2 chart2 chart3 chart3 chart1 chart1"
+        "chart4 chart4 chart5 chart5 chart6 chart6";
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr;
+    background: linear-gradient(313deg, #d7a7ff, #5700ff);
+}
+
+@media screen and (600px<width<768px) {
+    .gridContainer {
+        grid-template-areas:
+            "title title title title "
+            "filter filter dropdown dropdown"
+            "stats1 stats2 stats3 stats4"
+            "chart2 chart2 chart3 chart3 "
+            "chart4 chart4 chart5 chart5 "
+            " chart1 chart1  chart1 chart1"
+            "chart6 chart6 chart6 chart6";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+@media screen and (width<600px) {
+    .gridContainer {
+        grid-template-areas:
+            "title  "
+            "filter"
+            " dropdown"
+            "stats1 "
+            "stats2 "
+            "stats3"
+            " stats4"
+            " chart1"
+            "chart2 "
+            " chart3 "
+            "chart4  "
+            " chart5 "
+            "chart6 ";
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+    }
+}
+.gridContainer > * {
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgba(68, 68, 68, 0.411);
+    backdrop-filter: blur(2px);
+    padding: 1rem;
+
+}
+.title {
+    grid-area: title;
+}
+.filter {
+    grid-area: filter;
+}
+.dropdown {
+    grid-area: dropdown;
+}
+.stats1 {
+    grid-area: stats1;
+}
+.stats2 {
+    grid-area: stats2;
+}
+.stats3 {
+    grid-area: stats3;
+}
+.stats4 {
+    grid-area: stats4;
+}
+.chart1 {
+    grid-area: chart1;
+}
+.chart2 {
+    grid-area: chart2;
+}
+.chart3 {
+    grid-area: chart3;
+}
+.chart4 {
+    grid-area: chart4;
+}
+.chart5 {
+    grid-area: chart5;
+}
+.chart6 {
+    grid-area: chart6;
+}
+.ImageContainer {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

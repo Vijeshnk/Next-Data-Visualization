@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		.grid-container {
+			padding: 1rem;
+			display: grid;
+			gap: 1rem;
+			grid-template-areas:
+				"title title title title filter dropdown"
+				"stats1 stats2 stats3 stats4 chart1 chart1"
+				"chart2 chart2 chart3 chart3 chart1 chart1"
+				"chart4 chart4 chart5 chart5 chart6 chart6";
+			grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr;
+			grid-template-rows: 1fr 2fr 3fr 3fr;
+		}
+
+		@media screen and (600px<width<768px) {
+			.grid-container {
+				grid-template-areas:
+					"title title title title "
+					"filter filter dropdown dropdown"
+					"stats1 stats2 stats3 stats4"
+					" chart1 chart1  chart1 chart1"
+					"chart2 chart2 chart3 chart3 "
+					"chart4 chart4 chart5 chart5 "
+					"chart6 chart6 chart6 chart6";
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				grid-template-rows: auto;
+			}
+		}
+		@media screen and (width<600px) {
+			.grid-container {
+				grid-template-areas:
+					"title  "
+					"filter"
+					" dropdown"
+					"stats1 "
+					"stats2 "
+					"stats3"
+					" stats4"
+					" chart1"
+					"chart2 "
+					" chart3 "
+					"chart4  "
+					" chart5 "
+					"chart6 ";
+				grid-template-columns: 1fr ;
+				grid-template-rows: auto;
+			}
+		}
+		.grid-container > * {
+			border: 2px solid black;
+			border-radius: 1rem;
+			overflow: hidden;
+		}
+		.title {
+			grid-area: title;
+		}
+		.filter {
+			grid-area: filter;
+		}
+		.dropdown {
+			grid-area: dropdown;
+		}
+		.stats1 {
+			grid-area: stats1;
+		}
+		.stats2 {
+			grid-area: stats2;
+		}
+		.stats3 {
+			grid-area: stats3;
+		}
+		.stats4 {
+			grid-area: stats4;
+		}
+		.chart1 {
+			grid-area: chart1;
+		}
+		.chart2 {
+			grid-area: chart2;
+		}
+		.chart3 {
+			grid-area: chart3;
+		}
+		.chart4 {
+			grid-area: chart4;
+		}
+		.chart5 {
+			grid-area: chart5;
+		}
+		.chart6 {
+			grid-area: chart6;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	</style>
+	<body>
+		<!-- <router-outlet></router-outlet> -->
+
+		<div class="grid-container">
+			<div class="title"><h3>Rehman Ecommerce Sales Dashboard</h3></div>
+			<div class="filter">
+				<button>Qtr 1</button>
+				<button>Qtr 2</button>
+				<button>Qtr 3</button>
+				<button>Qtr 4</button>
+			</div>
+			<div class="dropdown">
+				<select name="name">
+					<option value="">ALL</option>
+					<option value="">ALL</option>
+					<option value="">ALL</option>
+					<option value="">ALL</option>
+				</select>
+			</div>
+			<div class="stats1">
+				<h2>438k</h2>
+				<span>Sum of Amount</span>
+			</div>
+			<div class="stats2">
+				<h2>37k</h2>
+				<span>Sum of Amount</span>
+			</div>
+			<div class="stats3">
+				<h2>5615</h2>
+				<span>Sum of Amount</span>
+			</div>
+			<div class="stats4">
+				<h2>500</h2>
+				<span>Sum of Amount</span>
+			</div>
+			<div class="chart1"><img src="./image/chart1.png" alt="" /></div>
+			<div class="chart2"><img src="./image/chart2.png" alt="" /></div>
+			<div class="chart3"><img src="./image/chart3.png" alt="" /></div>
+			<div class="chart4"><img src="./image/chart4.png" alt="" /></div>
+			<div class="chart5"><img src="./image/chart5.png" alt="" /></div>
+			<div class="chart6"><img src="./image/chart6.png" alt="" /></div>
+		</div>
+	</body>
+</html>
